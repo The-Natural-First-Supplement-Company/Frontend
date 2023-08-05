@@ -10,12 +10,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #b8e5b8;
 }
 
 .navbar {
-    background-color: #333;
-    color: #fff;
+    background-color: #b8e5b8;
+    color: #b8e5b8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,13 +23,14 @@ body {
 }
 
 .navbar a {
-    color: #fff;
+    color: #b8e5b8;
     text-decoration: none;
     padding: 10px 20px;
 }
 
 .navbar a.active {
     color: red;
+    font-size: 18px;
 }
 
 .container {
@@ -68,22 +69,23 @@ body {
     width: 94%;
     margin: 1rem auto 0;
     padding: 18px 18px 18px 18px;
+    border-radius: 25px;
 }
 
 .options {
     display: flex;
     flex-wrap: wrap;
-    background: #f0f0f0;
+    background: #ffffff;
     width: 94%;
     margin: 1rem auto 0;
-    border-radius: .5rem;
+    border-radius: 2.5rem;
     padding: 3%;
     justify-content: space-around;
     margin-bottom: 100px;
 }
 
 .option {
-    color: #fff;
+    color: #f4f8f8;
     padding: 1.2rem 0;
     position: relative;
     font-size: 1rem;
@@ -96,11 +98,11 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f0f0f0;
+    background-color: #f6fbf8;
     text-decoration: none;
     color: #333;
-    border-radius: 5px;
-    text-wrap: nowrap;
+    border-radius: 10px;
+    /* text-wrap: nowrap; */
     /* width: 3rem;
     height: 3rem;
     margin-bottom: .5rem; */
@@ -112,7 +114,7 @@ body {
 
 .footer {
     background-color: #333;
-    color: #fff;
+    color: #b8e5b8;
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -172,7 +174,7 @@ body {
 
 /* Colors for middle part of the page */
 .main-content {
-    background-color: #f0f0f0;
+    background-color: #b8e5b8;
     max-height: calc(100vh - 60px);
     overflow-y: auto;
 }
@@ -198,7 +200,7 @@ body {
     }
 
     .navbar a {
-        margin: 5px 0;
+        margin: auto;
     }
 
     .main-content {
@@ -229,7 +231,7 @@ body {
 @media screen and (max-width: 460px) {
     .navbar a {
         padding: 8px 12px;
-        font-size: 12px;
+        font-size: 18px;
     }
 
     .main-content {
