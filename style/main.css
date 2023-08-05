@@ -1,0 +1,254 @@
+* {
+    list-style-type: none;
+    -webkit-tap-highlight-color: rgba(255,0,0,0);
+}
+.container{
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a.active {
+    color: red;
+}
+
+.container {
+    height: 100%;
+    font-size: 1rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.index {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* .main-container {
+    position: absolute;
+    top: 3.8rem;
+    right: 0;
+    bottom: 4.2rem;
+    overflow-y: auto;
+    left: 0;
+} */
+
+.main-content {
+    position:relative;
+    top: -0.1rem;
+    right: 0;
+    bottom: 4.2rem;
+    overflow-y: auto;
+    left: 0;
+}
+
+.intro-image img {
+    /* margin-top: 10px; */
+    width: 94%;
+    margin: 1rem auto 0;
+    padding: 18px 18px 18px 18px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    background: #f0f0f0;
+    width: 94%;
+    margin: 1rem auto 0;
+    border-radius: .5rem;
+    padding: 3%;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.option {
+    color: #fff;
+    padding: 1.2rem 0;
+    position: relative;
+    font-size: 1rem;
+    width: 25%;
+    text-align: center;
+}
+
+.option a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    text-wrap: nowrap;
+    /* width: 3rem;
+    height: 3rem;
+    margin-bottom: .5rem; */
+}
+
+.option a div {
+    padding-top: inherit;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tabs div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabs span {
+    margin-top: 5px;
+}
+
+.tabs i {
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.tabs i.fa-home {
+    color: red;
+    transform: scale(1.1);
+}
+
+
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+    .main-content {
+        padding: 10px;
+    }
+    .options {
+        padding: 5px;
+    }
+    .navbar a {
+        padding: 8px 15px;
+    }
+    .tabs i {
+        font-size: 20px;
+        padding: 8px;
+    }
+}
+
+/* Existing styles for larger screens */
+
+/* Colors for middle part of the page */
+.main-content {
+    background-color: #f0f0f0;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+.options a {
+    color: #333;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    margin: 0 auto;
+    right: 0;
+    height: 4.2rem;
+    box-shadow: #d8d8d8 0 0 3px;
+}
+
+/* Responsive CSS for smaller screens (566px and below) */
+@media screen and (max-width: 566px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .options {
+        padding: 5px;
+    }
+
+    .option {
+        margin: 5px;
+    }
+
+    .tabs i {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    /* Responsive image */
+    .intro-image img {
+        max-width: -webkit-fill-available;
+        height: auto;
+    }
+}
+
+/* Responsive CSS for even smaller screens (460px and below) */
+@media screen and (max-width: 460px) {
+    .navbar a {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .main-content {
+        padding: 5px;
+    }
+
+    .options {
+        padding: 2px;
+    }
+
+    .option a {
+        padding: 5px 10px;
+    }
+
+    .tabs i {
+        font-size: 18px;
+        padding: 5px;
+    }
+}
+
+
+
