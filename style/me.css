@@ -1,9 +1,9 @@
 * {
     list-style-type: none;
-    -webkit-tap-highlight-color: rgba(255,0,0,0);
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -11,7 +11,7 @@
 
 body {
     height: 100%;
-    font-family: \5fae\8f6f\96c5\9ed1,\5b8b\4f53,Arial;
+    font-family: \5fae\8f6f\96c5\9ed1, \5b8b\4f53, Arial;
     max-width: 640px;
     margin: 0 auto;
     background: #b8e5b8;
@@ -87,7 +87,6 @@ body {
     bottom: 4.2rem;
     overflow-y: auto;
     left: 0;
-    margin-top: 10px;
 }
 
 .profile-details {
@@ -111,10 +110,10 @@ body {
 
 .profile-image img {
     border-radius: 5px;
-    width: 80px; 
-    height: 80px; 
+    width: 80px;
+    height: 80px;
     object-fit: cover;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 #user-mail {
@@ -122,18 +121,18 @@ body {
 }
 
 .profile-text {
-    color: #333; 
+    color: #333;
     margin-left: 0.5rem;
     margin-bottom: 1rem;
 }
 
 .settings-icon {
-    
+
     position: relative;
-    top: -10px; 
+    top: -10px;
     right: 0;
-    font-size: 18px; 
-    color: #333; 
+    font-size: 18px;
+    color: #333;
 }
 
 .settings-icon i {
@@ -142,8 +141,9 @@ body {
 }
 
 .wallet-separator {
-    margin-top: 10px; 
-    border-top: 1px solid #2f2d2d;;
+    margin-top: 10px;
+    border-top: 1px solid #2f2d2d;
+    ;
     width: 100%;
     opacity: 0.2;
 }
@@ -153,7 +153,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 10px;
-    padding: 10px 0; 
+    padding: 10px 0;
 }
 
 .wallet-section {
@@ -164,33 +164,34 @@ body {
 }
 
 .wallet-label {
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 .separator {
-    width: 1px; 
-    height: 50px; 
-    background-color: #2f2d2d; 
-    opacity: 0.2; 
+    width: 1px;
+    height: 50px;
+    background-color: #2f2d2d;
+    opacity: 0.2;
 }
 
 .recharge-value,
 .balance-value {
-    margin: 5px 0; 
+    margin: 5px 0;
     color: #f94140;
 }
 
 .stats {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px; 
-    padding: 10px 0; 
+    margin-top: 20px;
+    padding: 10px 0;
     background-color: white;
     border-radius: 10px;
 }
 
 .stat {
-    flex: 1; /* Equal width for each stat div */
+    flex: 1;
+    /* Equal width for each stat div */
     text-align: center;
     color: #333;
     padding: 15px;
@@ -213,7 +214,7 @@ body {
     padding: 15px;
     cursor: pointer;
     position: relative;
-    color: black;    
+    color: black;
     margin-top: 20px;
     margin-bottom: 100px;
 }
@@ -226,6 +227,7 @@ body {
     bottom: 0;
     left: 0;
 }
+
 .footer {
     background-color: #5a5858;
     margin: 0 auto;
@@ -279,6 +281,14 @@ body {
 
 .popup.active {
     display: block;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgb(49, 21, 36);
+}
+
+.popup.active:hover {
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s;
+    box-shadow: 3px 3px rgb(158, 110, 136);
 }
 
 .popup-content {
@@ -359,11 +369,11 @@ body {
     }
 
     .popup-content a {
-        font-size: 14px; 
+        font-size: 14px;
     }
 
     .popup-content i {
-        font-size: 20px; 
+        font-size: 20px;
     }
 
     .close-button {
@@ -373,13 +383,13 @@ body {
     }
 }
 
-@media screen and (max-width: 460px){
-    .content{
-        padding:5px;
+@media screen and (max-width: 460px) {
+    .content {
+        padding: 5px;
     }
 }
 
-@media screen and (max-width: 280px){
+@media screen and (max-width: 280px) {
     .profile-image img {
         width: 50px;
         height: 50px;
@@ -415,7 +425,7 @@ body {
 
     .footer {
         font-size: small;
-        
+
     }
 
     .tabs i {
@@ -423,4 +433,3 @@ body {
     }
 
 }
-
