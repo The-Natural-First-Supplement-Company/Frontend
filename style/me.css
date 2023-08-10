@@ -283,6 +283,7 @@ body {
     display: block;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgb(49, 21, 36);
+    width: max-content;
 }
 
 .popup.active:hover {
