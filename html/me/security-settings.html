@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../style/salary.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="article">
+            <div class="nav-bar" style="height: 60px;">
+                <div class="nav-bar-fixed">
+                    <div class="navbar-content">
+                        <div class="navbar-left">
+                            <i class="back-icon" style="font-size: 1.3rem; vertical-align: middle; top: 0px;">&larr;</i>
+                            <span class="back-text" style="vertical-align: middle; position: relative; left: -2px;" >Back</span>
+                        </div>
+                        <div class="title">
+                            <div>Salary</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-wrap">
+                <div class="article-content">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const backButton = document.querySelector('.back-text');
+    
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
+    </script>
+</body>
+
+
+</html>
