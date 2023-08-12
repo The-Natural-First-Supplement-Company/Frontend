@@ -94,7 +94,7 @@ body {
 }
 
 .option a {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     align-items: center;
     padding: 10px 20px;
@@ -148,12 +148,12 @@ body {
 }
 
 .tabs i.fa-home {
-    color: red;
+    color: black;
     transform: scale(1.1);
 }
 
 .popup-mask {
-    background: rgba(63,89,74,0.7000);
+    background: rgba(63, 89, 74, 0.7000);
     z-index: 99;
     position: fixed;
     left: 0;
@@ -179,7 +179,7 @@ body {
 .popup.active {
     display: block;
     border-radius: 15px;
-    max-width: 575px;
+    max-width: 640px;
     box-shadow: 20px 20px 32px rgb(21 59 14);
 }
 
@@ -305,6 +305,12 @@ body {
     right: 0;
     height: 4.2rem;
     box-shadow: #d8d8d8 0 0 3px;
+}
+
+.fa-solid,
+.fas {
+    color: steelblue;
+    font-size: x-large;
 }
 
 /* Responsive CSS for smaller screens (566px and below) */
@@ -472,7 +478,7 @@ body {
 @media screen and (max-width: 280px) {
     .popup.active {
         width: 90%;
-        max-width: 215px;
+        max-width: 250px;
     }
 
     .popup-content {
@@ -505,4 +511,3 @@ body {
         font-size: small;
     }
 }
-
