@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../style/security-settings/link-bank-acc.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <div class="app">
         <div class="article">
@@ -14,8 +16,9 @@
                 <div class="nav-bar-fixed">
                     <div class="navbar-content">
                         <div class="navbar-left">
-                            <i class="back-icon" style="font-size: 1.3rem; vertical-align: middle; top: 0px;">&larr;</i>
-                            <span class="back-text" style="vertical-align: middle; position: relative; left: -2px;" >Back</span>
+                            <i class="fas fa-chevron-left" style="vertical-align: middle;"></i>
+                            <span class="back-text"
+                                style="vertical-align: middle; position: relative;">Back</span>
                         </div>
                         <div class="title">
                             <div style="color: black;">Link Bank Account</div>
@@ -25,7 +28,53 @@
             </div>
             <div class="article-wrap">
                 <div class="article-content">
-                    
+                    <form id="bankForm">
+                        <!-- First Div: Real Name -->
+                        <div class="info-item">
+                            <label for="realName" class="item-text">Real Name</label>
+                            <div class="input-area">
+                                <input type="text" id="realName" name="realName" placeholder="Please enter your name">
+                            </div>
+                        </div>
+
+                        <!-- Second Div: Bank Selection -->
+                        <div class="info-item">
+                            <label for="bankSelect" class="item-text">Bank</label>
+                            <div class="input-area">
+                                <select id="bankSelect" name="bankSelect">
+                                    <option value="" disabled selected>Please select a bank</option>
+                                    <!-- Populate options dynamically using API data -->
+                                    <option value="1">State Bank of India</option>
+                                    <option value="2">HDFC Bank</option>
+                                    <option value="3">ICICI Bank</option>
+                                    <option value="4">Axis Bank</option>
+                                    <option value="5">Punjab National Bank</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Third Div: Bank Account Number -->
+                        <div class="info-item">
+                            <label for="accountNumber" class="item-text">Account</label>
+                            <div class="input-area">
+                                <input type="text" id="accountNumber" name="accountNumber"
+                                    placeholder="Please enter the bank account number">
+                            </div>
+                        </div>
+
+                        <!-- Fourth Div: IFSC Code -->
+                        <div class="info-item">
+                            <label for="ifscCode" class="item-text">IFSC Code</label>
+                            <div class="input-area">
+                                <input type="text" id="ifscCode" name="ifscCode"
+                                    placeholder="Please enter the IFSC code">
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="center-button">
+                        <button type="submit" id="submitButton">Submit</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,7 +82,7 @@
 
     <script>
         const backButton = document.querySelector('.back-text');
-    
+
         backButton.addEventListener('click', () => {
             window.history.back();
         });

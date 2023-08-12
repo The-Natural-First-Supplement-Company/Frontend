@@ -30,7 +30,7 @@ body {
 }
 
 .navbar a.active {
-    color: red;
+    color: black;
     font-size: 18px;
 }
 
@@ -148,7 +148,7 @@ body {
 }
 
 .tabs i.fa-home {
-    color: black;
+    color: red;
     transform: scale(1.1);
 }
 

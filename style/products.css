@@ -32,12 +32,10 @@ body {
     color: #fff;
 }
 
-
-
 .nav-bar .nav-bar-fixed {
     z-index: 1000;
     background-color: #e2ebeb;
-    color: #c45454;
+    color: black;
     max-width: 640px;
     margin: 0 auto;
     right: 0;
@@ -100,7 +98,7 @@ body {
     border-radius: 2.5rem;
     padding: 3%;
     justify-content: space-around;
-    margin-bottom: 100px;
+    margin-bottom: 115px;
 }
 
 .option {

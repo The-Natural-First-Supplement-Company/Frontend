@@ -32,8 +32,6 @@ body {
     color: #fff;
 }
 
-
-
 .nav-bar .nav-bar-fixed {
     z-index: 1000;
     background-color: #e2ebeb;
@@ -57,7 +55,7 @@ body {
 }
 
 .nav-bar .navbar-content {
-    height: 4rem;
+    height: 3rem;
 }
 
 .navbar-content {
@@ -68,7 +66,7 @@ body {
 }
 
 .navbar-left {
-    padding: 0 6px;
+    padding: 0 0 0 15px;
 }
 
 .title {
@@ -101,11 +99,10 @@ img {
     display: block;
 }
 
-.back-icon {
+.fas .fa-chevron-right {
     display: inline-block;
     vertical-align: middle;
     margin-right: 5px;
-    font-size: 1.3rem;
 }
 
 .back-text {
@@ -127,13 +124,11 @@ img {
         padding: 0 10px; /* Increase padding for smaller screens */
     }
 
-    .back-icon {
-        font-size: 1.2rem; /* Reduce font size for smaller screens */
-        margin-right: 3px; /* Adjust margin for back icon */
+    .navbar-left{
+        font-size: medium;
     }
 
     .back-text {
-        font-size: 1rem; /* Reduce font size for smaller screens */
         position: relative;
         top: -1px; /* Adjust vertical alignment for back text */
     }
@@ -149,9 +144,29 @@ img {
         border-radius: 0; /* Remove border-radius for smaller screens */
     }
 
-    .back-icon {
-        font-size: 1rem; /* Reduce font size further for smaller screens */
-        margin-right: 2px; /* Further adjust margin for back icon */
+    .navbar-content {
+        font-size: small;
+    }
+
+    .fas .fa-chevron-right {
+        
     }
 }
 
+@media screen and (max-width: 415px) {
+    
+
+    .title div {
+        font-size: small;
+    }
+
+    .navbar-left{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .navbar-content {
+        font-size: small;
+    }
+}
