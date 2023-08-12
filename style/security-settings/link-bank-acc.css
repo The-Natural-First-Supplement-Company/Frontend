@@ -1,0 +1,226 @@
+* {
+    list-style-type: none;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    height: 100%;
+    font-family: \5fae\8f6f\96c5\9ed1, \5b8b\4f53, Arial;
+    max-width: 640px;
+    margin: 0 auto;
+    background: #b8e5b8;
+    color: #333;
+}
+
+.app {
+    height: 100%;
+    font-size: 1rem;
+    max-width: 640px;
+    margin: 0 auto;
+    display: block;
+}
+
+.article {
+    position: relative;
+    min-height: 100%;
+    color: #fff;
+}
+
+
+
+.nav-bar .nav-bar-fixed {
+    z-index: 1000;
+    background-color: #e2ebeb;
+    color: #c45454;
+    max-width: 640px;
+    margin: 0 auto;
+    right: 0;
+    border-radius: 15px;
+}
+
+.nav-bar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: var(--van-line-height-lg);
+    text-align: center;
+    background: var(--van-nav-bar-background-color);
+    /* -webkit-user-select: none; */
+    user-select: none;
+}
+
+.nav-bar .navbar-content {
+    height: 3rem;
+}
+
+.navbar-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: var(--van-nav-bar-height);
+}
+
+.navbar-left {
+    padding: 0 6px;
+}
+
+.title {
+    max-width: 60%;
+    margin: 0 auto;
+    color: black;
+    font-weight: var(--van-font-weight-bold);
+    font-size: var(--van-nav-bar-title-font-size);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.article-wrap {
+    padding: 0 4%;
+}
+
+.article-content {
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background: #fff;
+}
+
+/* img {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    border: 0;
+    display: block;
+} */
+
+/* Existing styles... */
+
+.info-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.item-icon {
+    /* font-size: 24px; */
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.item-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.item-text {
+    flex: 1;
+    font-size: 18px;
+    color: black;
+}
+
+.item-arrow {
+    font-size: 18px;
+    color: #b3a3a3;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#signOutButton {
+    width: 200px;
+    background-color: #E10600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-out;
+}
+
+#signOutButton:hover {
+    background-color: #f80505;
+}
+
+
+
+.back-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 1.3rem;
+}
+
+.back-text {
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+}
+
+/* Existing styles... */
+
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+    .title {
+        max-width: 80%;
+        /* Adjust the maximum width for smaller screens */
+    }
+
+    .article-wrap {
+        padding: 0 10px;
+        /* Increase padding for smaller screens */
+    }
+
+    .back-icon {
+        font-size: 1.2rem;
+        /* Reduce font size for smaller screens */
+        margin-right: 3px;
+        /* Adjust margin for back icon */
+    }
+
+    .back-text {
+        font-size: 1rem;
+        /* Reduce font size for smaller screens */
+        position: relative;
+        top: -1px;
+        /* Adjust vertical alignment for back text */
+    }
+
+    .article-content {
+        font-size: 1rem;
+        /* Adjust font size for content */
+    }
+}
+
+/* Additional responsive CSS for smaller screens (566px and below) */
+@media screen and (max-width: 566px) {
+    .nav-bar-fixed {
+        border-radius: 0;
+        /* Remove border-radius for smaller screens */
+    }
+
+    .back-icon {
+        font-size: 1rem;
+        /* Reduce font size further for smaller screens */
+        margin-right: 2px;
+        /* Further adjust margin for back icon */
+    }
+}

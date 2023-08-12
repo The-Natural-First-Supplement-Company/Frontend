@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="../style/salary.css">
+    <link rel="stylesheet" href="../../style/security-settings/link-bank-acc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
@@ -16,30 +18,78 @@
                     <div class="navbar-content">
                         <div class="navbar-left">
                             <i class="back-icon" style="font-size: 1.3rem; vertical-align: middle; top: 0px;">&larr;</i>
-                            <span class="back-text" style="vertical-align: middle; position: relative; left: -2px;" >Back</span>
+                            <span class="back-text"
+                                style="vertical-align: middle; position: relative; left: -2px;">Back</span>
                         </div>
                         <div class="title">
-                            <div>Salary</div>
+                            <div style="color: black;">Security Settings</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="article-wrap">
                 <div class="article-content">
-                    
+                    <div class="clickable-div" data-link="personal-info.html">
+                        <div class="info-item">
+                            <div class="item-text">Personal Information</div>
+                            <div class="item-icon"><img src="../../images/logo.png" alt="Icon"></div>
+                            <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clickable-div" data-link="change-password.html">
+                        <div class="info-item">
+                            <div class="item-text">Modify Login Password</div>
+                            <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clickable-div" data-link="change-pay-password.html">
+                        <div class="info-item">
+                            <div class="item-text">Modify Payment Password</div>
+                            <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="clickable-div" data-link="../link-account.html">
+                        <div class="info-item">
+                            <div class="item-text">Link Bank Account</div>
+                            <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="center-button">
+                        <button id="signOutButton">Sign Out</button>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
 
     <script>
         const backButton = document.querySelector('.back-text');
-    
         backButton.addEventListener('click', () => {
             window.history.back();
         });
-    </script>
-</body>
 
+    </script>
+    <script>
+        const clickableDivs = document.querySelectorAll('.clickable-div');
+        const signOutButton = document.getElementById('signOutButton');
+
+        clickableDivs.forEach(div => {
+            div.addEventListener('click', () => {
+                const link = div.getAttribute('data-link');
+                if (link) {
+                    window.location.href = link;
+                }
+            });
+        });
+
+        signOutButton.addEventListener('click', () => {
+
+            alert('Signing out');
+        });
+    </script>
+
+
+</body>
 
 </html>
