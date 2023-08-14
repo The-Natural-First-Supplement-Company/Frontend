@@ -68,8 +68,8 @@ body {
 .intro-image img {
     /* margin-top: 10px; */
     border-radius: 15px;
-    max-width: 180px;
-    max-height: 90px;
+    max-width: 160px;
+    max-height: 160px;
 }
 
 .options {
