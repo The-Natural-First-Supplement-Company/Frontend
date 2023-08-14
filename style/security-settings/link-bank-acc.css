@@ -227,7 +227,7 @@ body {
         font-size: medium;
     }
 
-    .fas .fa-chevron-right {}
+    /* .fas .fa-chevron-right {} */
 
     .back-text {
         /* Reduce font size for smaller screens */
@@ -253,7 +253,7 @@ body {
         font-size: small;
     }
 
-    .fas .fa-chevron-right {}
+    /* .fas .fa-chevron-right {} */
 }
 
 @media screen and (max-width: 415px) {
