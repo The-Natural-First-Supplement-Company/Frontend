@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <link rel="stylesheet" href="../../style/security-settings/link-bank-acc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    
+    <div class="app">
+        <div class="article">
+            <div class="nav-bar" style="height: 60px;">
+                <div class="nav-bar-fixed">
+                    <div class="navbar-content">
+                        <div class="navbar-left">
+                            <i class="fas fa-chevron-left" style="vertical-align: middle;"></i>
+                            <span class="back-text" style="vertical-align: middle; position: relative;">Back</span>
+                        </div>
+                        <div class="title">
+                            <div style="color: black;">Personal Information</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-wrap">
+                <div class="article-content">
+                    <div class="info-item">
+                        <div class="item-text">ID</div>
+                        <div class="item-value">Your ID Value</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="item-text">Account</div>
+                        <div class="item-value">Your Account Value</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="item-text">Nickname</div>
+                        <div class="input-nickname">
+                            <input type="text" placeholder="Your Nickname" value="yash">
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="item-text">Current Avatar</div>
+                        <div class="item-image">
+                            <img src="../../images/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="item-text">Modify Avatar</div>
+                        <div class="item-image">
+                            <div class="add-avatar-icon">&nbsp;+</div>
+                        </div>
+                    </div>
+                    <div class="center-button">
+                        <button id="submitButton">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const backButton = document.querySelector('.back-text');
+        const submitButton = document.getElementById('submitButton');
+        const modifyAvatarIcon = document.querySelector('.add-avatar-icon');
+
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
+
+        submitButton.addEventListener('click', () => {
+            // Code to handle the submit button click
+            // You can retrieve the values of the input fields and perform any necessary actions here
+            // For example, you can use document.querySelector to get the values and send them to a server or perform validation
+            // Example:
+            // const nicknameValue = document.querySelector('.input-nickname input[type="text"]').value;
+            // const avatarImage = document.querySelector('.item-image img').src;
+            // Then you can use these values for further processing
+        });
+
+        modifyAvatarIcon.addEventListener('click', () => {
+            // Code to handle the Modify Avatar icon click
+            // You can use the HTML input element of type file to handle image upload
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = 'image/*';
+            fileInput.addEventListener('change', (event) => {
+                const selectedFile = event.target.files[0];
+                if (selectedFile) {
+                    // Handle the selected file here, you can use FileReader to preview the image
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        const imagePreview = document.createElement('img');
+                        imagePreview.src = e.target.result;
+                        imagePreview.classList.add('uploaded-avatar');
+                        modifyAvatarIcon.innerHTML = ''; // Clear the "+" icon
+                        modifyAvatarIcon.appendChild(imagePreview);
+                    };
+                    reader.readAsDataURL(selectedFile);
+                }
+            });
+            fileInput.click(); // Trigger the file input click event
+        });
+    </script>
 </body>
 </html>

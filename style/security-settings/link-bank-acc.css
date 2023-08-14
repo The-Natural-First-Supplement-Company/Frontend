@@ -120,15 +120,16 @@ body {
     color: black;
     outline: none;
 }
+
 .input-area {
     flex: 1;
     display: flex;
     align-items: center;
     background: #f7f6f6;
     border-radius: 10px;
-    padding: 0 5px;
-    margin-left: -200px; /* Add this to control spacing between label and input */
-    box-sizing: border-box; /* Add this to include padding in width calculation */
+    margin-left: -200px;
+    box-sizing: border-box;
+    /* Add this to include padding in width calculation */
 }
 
 .item-icon {
@@ -222,12 +223,11 @@ body {
         /* Increase padding for smaller screens */
     }
 
-    .navbar-left{
+    .navbar-left {
         font-size: medium;
     }
-    .fas .fa-chevron-right {
-    
-    }
+
+    .fas .fa-chevron-right {}
 
     .back-text {
         /* Reduce font size for smaller screens */
@@ -253,9 +253,7 @@ body {
         font-size: small;
     }
 
-    .fas .fa-chevron-right {
-        
-    }
+    .fas .fa-chevron-right {}
 }
 
 @media screen and (max-width: 415px) {
@@ -267,7 +265,7 @@ body {
         font-size: small;
     }
 
-    .navbar-left{
+    .navbar-left {
         font-size: small;
     }
 
@@ -312,5 +310,96 @@ body {
     #submitButton {
         font-size: medium;
         width: 125px;
+    }
+}
+
+
+/* code personal information html */
+
+/* ... (existing styles) ... */
+
+.item-value {
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.item-image {
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.item-value {
+    font-size: medium;
+    justify-content: flex-start;
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+.item-image {
+    justify-content: flex-start;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.input-nickname {
+    justify-content: flex-start;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #f7f6f6;
+    border-radius: 10px;
+    padding: 0 5px;
+    margin-left: 100px;
+    box-sizing: border-box;
+}
+
+.input-nickname input[type="text"] {
+    width: 100%;
+    text-align: right;
+}
+
+
+.item-image img {
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.add-avatar-icon {
+    /* Style the "+" icon div as needed */
+    font-size: 65px;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 415px) {
+    .item-value {
+        font-size: 9.5px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .item-value {
+        font-size: 8px;
+    }
+
+    .input-nickname {
+        margin-left: 40px;
+    }
+
+    .input-nickname input[type="text"] {
+        font-size: 8px;
     }
 }
