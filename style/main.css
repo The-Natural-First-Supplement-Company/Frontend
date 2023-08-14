@@ -343,8 +343,8 @@ body {
 
     /* Responsive image */
     .intro-image img {
-        max-width: 160px;
-        height: 110px;
+        max-width: 140px;
+        height: 140px;
     }
 }
 
