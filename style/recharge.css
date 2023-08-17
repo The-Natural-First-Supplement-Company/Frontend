@@ -99,47 +99,9 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
-.info-item input[type="text"],
-.info-item select {
-    width: 100%;
-    padding: 8px;
-    font-size: 18px;
-    border: none;
-    border-radius: 0;
-    background: none;
-    color: black;
-    outline: none;
-}
-
-.input-area {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    background: #f7f6f6;
-    border-radius: 10px;
-    margin-left: -200px;
-    box-sizing: border-box;
-    /* Add this to include padding in width calculation */
-}
-
-.item-icon {
-    /* font-size: 24px; */
-    margin-right: 10px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.item-icon img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-}
-
 .item-text {
     flex: 1;
-    font-size: 18px;
+    font-size: 15px;
     color: black;
 }
 
@@ -242,14 +204,6 @@ body {
         font-size: small;
     }
 
-    .info-item input[type="text"] {
-        font-size: 9.5px;
-    }
-
-    .item-text {
-        font-size: 11px;
-    }
-
     #submitButton {
         font-size: medium;
     }
@@ -264,79 +218,10 @@ body {
         font-size: small;
     }
 
-    .info-item input[type="text"] {
-        font-size: 7.5px;
-    }
-
-    .item-text {
-        font-size: 8.5px;
-    }
-
     #submitButton {
         font-size: medium;
         width: 125px;
     }
-}
-
-/* code personal information html */
-
-.item-value {
-    display: flex;
-    align-items: center;
-    color: #333;
-}
-
-.item-value {
-    font-size: medium;
-    justify-content: flex-start;
-    font-weight: 300;
-    margin-right: 10px;
-}
-
-@media screen and (max-width: 415px) {
-    .item-value {
-        font-size: 10px;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    .item-value {
-        font-size: 8px;
-    }
-
-    .input-nickname {
-        margin-left: 40px;
-    }
-
-    .input-nickname input[type="text"] {
-        font-size: 8px;
-    }
-}
-
-/* Code for change password */
-
-.input-new-pswd {
-    justify-content: flex-start;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    background: #f7f6f6;
-    border-radius: 10px;
-    /* padding: 0 5px; */
-    margin-left: -5px;
-    box-sizing: border-box;
-}
-
-.input-new-pswd input[type="password"] {
-    width: 100%;
-    text-align: right;
-    padding: 8px;
-    font-size: medium;
-    border: none;
-    border-radius: 0;
-    background: none;
-    color: black;
-    outline: none;
 }
 
 .veri-code {
@@ -363,24 +248,7 @@ body {
     outline: none;
 }
 
-.send button {
-    background-color: skyblue;
-    border-radius: 10px;
-    width: 70px;
-    font-size: medium;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-
 @media screen and (max-width: 594px) {
-    .input-new-pswd {
-        margin-left: 40px;
-    }
-
-    .input-new-pswd input[type="password"] {
-        font-size: 12px;
-    }
-
     .veri-code {
         margin-left: 90px;
     }
@@ -388,47 +256,19 @@ body {
     .veri-code input[type="text"] {
         font-size: 12px;
     }
-
-    .send button {
-        
-        font-size: 12px;
-        width: 50px; 
-    }
 }
 
 @media screen and (max-width: 434px) {
-    .input-new-pswd {
-        margin-left: -90px;
-    }
-
-    .input-new-pswd input[type="password"] {
-        font-size: 10px;
-    }
-
     .veri-code {
         margin-left: -65px;
     }
 
     .veri-code input[type="text"] {
-        font-size: 10px;
-    }
-
-    .send button {
-        margin-bottom: 6px;
-        font-size: 10px;
-        width: 45px; 
+        font-size: 12px;
     }
 }
 
 @media screen and (max-width: 342px) {
-    .input-new-pswd {
-        margin-left: -87px;
-    }
-
-    .input-new-pswd input[type="password"] {
-        font-size: 8px;
-    }
-
     .veri-code {
         margin-left: -55px;
     }
@@ -436,29 +276,15 @@ body {
     .veri-code input[type="text"] {
         font-size: 8px;
     }
-
-    .send button {
-        margin-bottom: 5px;
-        font-size: 10px;
-        width: 35px; 
-    }
 }
 
 @media screen and (max-width: 285px) {
-    /* .input-new-pswd {
-        margin-left: -25px;
-    } */
-
     .input-new-pswd input[type="password"] {
         font-size: 8px;
     }
 
-    /* .veri-code {
-        margin-left: 10px;
-    } */
-
     .veri-code input[type="text"] {
-        font-size: 8px;
+        font-size: 9px;
     }
 
     .send {
@@ -519,5 +345,37 @@ body {
 
     .send {
         font-size: 11px;
+    }
+}
+
+/* code for recharge page */
+
+.payment-channel {
+    color: #333;
+    display: flow;
+}
+
+.pay-option {
+    display: flex;
+    vertical-align: bottom;
+    margin-top: 10px;
+}
+
+.pay-head {
+    font-size: medium;
+}
+
+@media screen and (max-width:430px) {
+    .payment-channel {
+        color: #333;
+        display: flow;
+    }
+    
+    .pay-head {
+        font-size: medium;
+    }
+    
+    .pay-type {
+        font-size: small;
     }
 }

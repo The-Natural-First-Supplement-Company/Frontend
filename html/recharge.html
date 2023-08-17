@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../style/recharge.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="article">
+            <div class="nav-bar" style="height: 60px;">
+                <div class="nav-bar-fixed">
+                    <div class="navbar-content">
+                        <div class="navbar-left">
+                            <i class="fas fa-chevron-left" style="vertical-align: middle;"></i>
+                            <span class="back-text" style="vertical-align: middle; position: relative;">Back</span>
+                        </div>
+                        <div class="title">
+                            <div style="color: black;">Recharge</div>
+                        </div>
+                        <div class="navbar-right">
+                            <span class="record-text" style="vertical-align: middle; position: relative;">Records</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-wrap">
+                <div class="article-content">
+                    <div class="balance">
+                        Balance: <span id="balance">0.00</span>
+                    </div>
+                    <form id="bankForm">
+                        <div class="info-item">
+                            <div class="item-text amount">Amount:<br></div>
+                            <div class="veri-code"><input type="text" placeholder="Please enter the amount"></div>
+                            <div class="send">Rs.</div>
+                        </div>
+                        <div class="info-item payment-channel">
+                            <div class="pay-head">Payment Channel</div>
+                            <div class="pay-option">
+                                <div class="item-text pay-type">
+                                    <i class="fa-solid fa-money-bill-1">&nbsp;&nbsp;</i>UPI
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="upi" name="paymentOption">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="center-button">
+                        <button type="submit" id="submitButton" disabled>Proceed</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const backButton = document.querySelector('.back-text');
+
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
+    </script>
+
+    <script>
+        const amountInput = document.querySelector('input[type="text"]');
+        const radioButtons = document.querySelectorAll('input[name="paymentOption"]');
+        const proceedButton = document.getElementById('submitButton');
+
+        // Function to check if the proceed button should be enabled
+        function checkInputs() {
+            const isAmountFilled = amountInput.value.trim() !== "";
+            const isRadioSelected = Array.from(radioButtons).some(button => button.checked);
+
+            if (isAmountFilled && isRadioSelected) {
+                proceedButton.removeAttribute('disabled');
+            } else {
+                proceedButton.setAttribute('disabled', 'disabled');
+            }
+        }
+
+        // Add event listeners
+        amountInput.addEventListener('input', checkInputs);
+        radioButtons.forEach(button => button.addEventListener('change', checkInputs));
+
+        // Redirect function
+        function redirectToAnotherPage() {
+            // Add your redirection logic here
+            window.location.href = "qr.html";
+        }
+
+        // Add event listener to the "Proceed" button
+        proceedButton.addEventListener('click', function (event) {
+            if (!proceedButton.hasAttribute('disabled')) {
+                redirectToAnotherPage();
+            } else {
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+
+</body>
+
+</html>
