@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../style/myteams.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="article">
+            <div class="nav-bar" style="height: 60px;">
+                <div class="nav-bar-fixed">
+                    <div class="navbar-content">
+                        <div class="navbar-left">
+                            <i class="fas fa-chevron-left" style="vertical-align: middle;"></i>
+                            <span class="back-text" style="vertical-align: middle; position: relative;">Back</span>
+                        </div>
+                        <div class="title">
+                            <div style="color: black;">My teams</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-wrap">
+                <div class="article-content">
+                    <div class="total">
+                        Total: <span id="total-teams">0.00</span>
+                    </div>
+                    <div class="member-buttons">
+                        <button class="invalid-button">Invalid Member</button>
+                        <button class="valid-button">Valid Member</button>
+                    </div>
+                    <!-- Member Table -->
+                    <div class="member-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>Registration Time</th>
+                                    <th>Product</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Rows will be added dynamically using JavaScript -->
+                                <!-- Valid Member Data -->
+                                <tr>
+                                    <td>Valid Account 1</td>
+                                    <td>2023-08-19 10:00 AM</td>
+                                    <td><button class="view-product-button" data-product="Product A">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Valid Account 2</td>
+                                    <td>2023-08-19 11:30 AM</td>
+                                    <td><button class="view-product-button" data-product="Product B">View</button></td>
+                                </tr>
+                                <!-- Add more valid member rows as needed -->
+                            </tbody>
+                        </table>
+                        <p class="no-data-text">No more</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const backButton = document.querySelector('.back-text');
+
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
+    </script>
+    <script>
+        const viewProductButtons = document.querySelectorAll('.view-product-button');
+
+        viewProductButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.getAttribute('data-product');
+                // Here you can define the URL of the product page
+                const productPageUrl = 'path-to-product-page.html'; // Replace with the actual URL
+                window.location.href = `${productPageUrl}?product=${productName}`;
+            });
+        });
+    </script>
+
+    <script>
+        const invalidButton = document.querySelector('.invalid-button');
+        const validButton = document.querySelector('.valid-button');
+        const memberTableContent = document.querySelector('.member-table tbody');
+
+        // Initialize button styles
+        validButton.style.backgroundColor = "#e2ebeb"; // Light background
+        validButton.style.color = "#c45454";          // Dark text
+        invalidButton.style.backgroundColor = "#333";  // Dark background
+        invalidButton.style.color = "#fff";           // Light text
+        
+        validButton.addEventListener('click', () => {
+            // Reset button styles
+            validButton.style.backgroundColor = "#e2ebeb"; // Light background
+            validButton.style.color = "#c45454";          // Dark text
+            invalidButton.style.backgroundColor = "#333";  // Dark background
+            invalidButton.style.color = "#fff";           // Light text
+
+            // Sample data for valid member table (replace with actual data)
+            memberTableContent.innerHTML = `
+                <tr>
+                    <td>Valid Account 1</td>
+                    <td>2023-08-19 10:00 AM</td>
+                    <td><button class="view-product-button" data-product="Product X">View</button></td>
+                </tr>
+                <tr>
+                    <td>Valid Account 2</td>
+                    <td>2023-08-19 11:30 AM</td>
+                    <td><button class="view-product-button" data-product="Product Y">View</button></td>
+                <!-- Add more rows as needed -->
+                `;
+        });
+
+        invalidButton.addEventListener('click', () => {
+            // Swap button styles
+            const tempBackgroundColor = validButton.style.backgroundColor;
+            const tempColor = validButton.style.color;
+
+            validButton.style.backgroundColor = invalidButton.style.backgroundColor;
+            validButton.style.color = invalidButton.style.color;
+
+            invalidButton.style.backgroundColor = tempBackgroundColor;
+            invalidButton.style.color = tempColor;
+
+            // Sample data for invalid member table (replace with actual data)
+            memberTableContent.innerHTML = `
+                <tr>
+                    <td>Invalid Account 1</td>
+                    <td>2023-08-19 10:00 AM</td>
+                    <td><button class="view-product-button" data-product="Product A">View</button></td>
+                </tr>
+                <tr>
+                    <td>Invalid Account 2</td>
+                    <td>2023-08-19 11:30 AM</td>
+                    <td><button class="view-product-button" data-product="Product B">View</button></td>
+                <!-- Add more rows as needed -->
+                `;
+        });
+    </script>
+
+</body>
+
+</html>
