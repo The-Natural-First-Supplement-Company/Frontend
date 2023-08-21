@@ -90,7 +90,13 @@
         backButton.addEventListener('click', () => {
             window.history.back();
         });
+
+        const recordsLink = document.querySelector('.record-text');
+
+        recordsLink.addEventListener('click', () => {
+            // Add your redirection logic here
+            window.location.href = "withdraw-records.html"; // Replace with the actual URL of the records page
+        });
     </script>
 </body>
-
 </html>

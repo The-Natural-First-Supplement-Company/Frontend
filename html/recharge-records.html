@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../style/records.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="article">
+            <div class="nav-bar" style="height: 60px;">
+                <div class="nav-bar-fixed">
+                    <div class="navbar-content">
+                        <div class="navbar-left">
+                            <i class="fas fa-chevron-left" style="vertical-align: middle;"></i>
+                            <span class="back-text" style="vertical-align: middle; position: relative;">Back</span>
+                        </div>
+                        <div class="title">
+                            <div style="color: black;">Recharge Records</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-wrap">
+                <div class="article-content">
+                    <div class="member-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th id="id-column">ID</th>
+                                    <th id="amount-column">Amount</th>
+                                    <th id="datetime-column">Date & Time</th>
+                                    <th id="status-column">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="withdrawal-records">
+                                
+                            </tbody>
+                        </table>
+                        <p class="no-data-text">No more</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const backButton = document.querySelector('.back-text');
+
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
+    </script>
+    <!-- <script>
+        // Sample withdrawal records data (replace this with your actual data)
+        const withdrawalData = [
+            { id: 1, amount: 100, datetime: '2023-08-21 10:00 AM', status: 'Completed' },
+            { id: 2, amount: 200, datetime: '2023-08-22 02:30 PM', status: 'Pending' },
+            // Add more records as needed
+        ];
+    
+        // Select the table body element
+        const tableBody = document.getElementById('withdrawal-records');
+    
+        // Populate the table with data
+        withdrawalData.forEach(record => {
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${record.id}</td>
+                <td>${record.amount}</td>
+                <td>${record.datetime}</td>
+                <td>${record.status}</td>
+            `;
+            tableBody.appendChild(newRow);
+        });
+    </script> -->
+    <script>
+        // Sample withdrawal records data (replace this with your actual data)
+        const withdrawalData = [
+            { id: 1, amount: 100, datetime: '2023-08-21 10:00 AM', status: 'Completed' },
+            { id: 2, amount: 200, datetime: '2023-08-22 02:30 PM', status: 'Pending' },
+            // Add more records as needed
+        ];
+    
+        // Select the table body element
+        const tableBody = document.getElementById('withdrawal-records');
+    
+        // Populate the table with data
+        withdrawalData.forEach(record => {
+            const newRow = document.createElement('tr');
+    
+            // Map data to column IDs
+            const columnIds = ['id-column', 'amount-column', 'datetime-column', 'status-column'];
+            columnIds.forEach(columnId => {
+                const cellData = record[columnId.replace('-column', '')]; // Remove the '-column' suffix
+                const newCell = document.createElement('td');
+                newCell.textContent = cellData;
+                newRow.appendChild(newCell);
+            });
+    
+            tableBody.appendChild(newRow);
+        });
+    </script>
+    
+</body>
+</html>
