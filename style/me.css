@@ -138,6 +138,7 @@ body {
 .settings-icon i {
     color: #777070;
     padding-right: 15px;
+    cursor: pointer;
 }
 
 .wallet-separator {
