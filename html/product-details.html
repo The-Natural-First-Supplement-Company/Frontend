@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../style/product-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="article">
+            <div class="nav-bar" style="height: 60px;">
+                <div class="nav-bar-fixed">
+                    <div class="navbar-content">
+                        <div class="navbar-left">
+                            <i class="fas fa-chevron-left" style="vertical-align: middle;"></i>
+                            <span class="back-text" style="vertical-align: middle; position: relative;">Back</span>
+                        </div>
+                        <div class="title">
+                            <div style="color: black;">Product Details</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="intro-image">
+                    <img src="../images/Product1.jpg" alt="">
+                    <span id="product-name">Super Gainer</span>
+                </div>
+
+                <div class="options">
+                    <div class="option">
+                        <div class="stat">
+                            <p>Invest</p>
+                            <p><span class="stat-value" id="invest">&#x20b9; 730</span></p>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="stat">
+                            <p>Cycle</p>
+                            <p><span class="stat-value" id="cycle">&#x20b9; 50</span></p>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="stat">
+                            <p>Income</p>
+                            <p><span class="stat-value" id="income">&#x20b9; 29.6</span></p>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="stat">
+                            <p>Total</p>
+                            <p><span class="stat-value" id="total">&#x20b9; 1460</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="description">
+                    <h3 style="color: black; margin-bottom: 5px;">Project Description<br></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magni eaque sint placeat. Ut,
+                        architecto quia, nemo officiis ex adipisci culpa dolor id iure velit molestias reiciendis.
+                        Tempora, rerum quaerat.</p>
+                    <div class="wallet-separator"></div>
+                    <p style="color: black;"><br>Business: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
+                        consequuntur ipsa officiis quo rerum error dolores a corporis temporibus et.
+                        <br><br>
+                    </p>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button class="purchase-button">Purchase</button>
+    </div>
+    <div class="popup" id="purchase-popup">
+        <div class="popup-content">
+            <div class="wallet">
+                <div class="wallet-section">
+                    <div class="wallet-label">Recharge Wallet</div>
+                    <span class="recharge-value">&#x20b9; 100</span>
+                </div>
+                <div class="separator"></div>
+                <div class="wallet-section">
+                    <div class="wallet-label">Balance Wallet</div>
+                    <span class="balance-value">&#x20b9; 250</span>
+                </div>
+            </div>
+            <div class="div-separator"></div>
+            <div class="price-row">
+                <div class="info-item">
+                    <div class="price-title">Price</div>
+                    <div class="price-value" id="price">&#x20b9; 250</div>
+                </div>
+                <div class="info-item">
+                    <div class="total-title">Total</div>
+                    <div class="total-value" id="total">&#x20b9; 250</div>
+                </div>
+                <!-- <div class="info-item">
+                    <label for="coupon-select" class="coupon">Coupon</label>
+                    <div class="input-area">
+                        <select id="coupon" name="coupon">
+                            <option value="" disabled selected>Choose a coupon</option>
+                            <option value="coupon1">Coupon 1</option>
+                            <option value="coupon2">Coupon 2</option>
+                            <option value="coupon3">Coupon 3</option>
+                        </select>
+                    </div>
+                </div> -->
+                <div class="buttons">
+                    <button class="cancel-button">Cancel</button>
+                    <button class="confirm-button">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const backButton = document.querySelector('.back-text');
+
+            backButton.addEventListener('click', () => {
+                window.history.back();
+            });
+        </script>
+
+        <script>
+            const purchaseButton = document.querySelector('.purchase-button');
+            const purchasePopup = document.getElementById('purchase-popup');
+            const cancelButton = purchasePopup.querySelector('.cancel-button');
+            const confirmButton = purchasePopup.querySelector('.confirm-button');
+
+            purchaseButton.addEventListener('click', () => {
+                purchasePopup.style.display = 'block';
+            });
+
+            cancelButton.addEventListener('click', () => {
+                purchasePopup.style.display = 'none';
+            });
+
+            confirmButton.addEventListener('click', () => {
+                // Perform purchase action or other logic here
+                purchasePopup.style.display = 'none';
+            });
+
+            const purchaseDiv = document.querySelector('.purchase-button');
+            const popUp = document.querySelector('.popup');
+            const closeButton = document.querySelector('.cancel-button');
+
+
+            purchaseDiv.addEventListener('click', () => {
+                popUp.classList.toggle('active');
+            });
+
+            closeButton.addEventListener('click', () => {
+                popUp.classList.remove('active');
+            });
+        </script>
+</body>
+
+</html>

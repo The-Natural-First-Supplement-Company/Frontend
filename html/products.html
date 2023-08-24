@@ -37,10 +37,9 @@
                                 Cycle : <span style="color: rgb(33, 177, 129);">&#x20b9; 50</span> <br>
                                 Income : <span style="color: rgb(33, 177, 129);">&#x20b9; 29.6</span> <br>
                                 Total : <span style="color: rgb(33, 177, 129);">&#x20b9; 1460</span> <br>
-            
                             </p>
 
-                            <button class="product-details">See Details</button>
+                            <button class="product-details see-details-btn">See Details</button>
                         </div>
                     </div>
 
@@ -56,7 +55,7 @@
                                 
                             </p>
 
-                            <button class="product-details">See Details</button>
+                            <button class="product-details see-details-btn">See Details</button>
                         </div>
                     </div>
                     <div class="option">
@@ -71,7 +70,7 @@
                                 
                             </p>
 
-                            <button class="product-details">See Details</button>
+                            <button class="product-details see-details-btn">See Details</button>
                         </div>
                     </div>
                     <div class="option">
@@ -86,7 +85,7 @@
                                 
                             </p>
 
-                            <button class="product-details">See Details</button>
+                            <button class="product-details see-details-btn">See Details</button>
                         </div>
                     </div>
                     <div class="option">
@@ -101,7 +100,7 @@
                                 
                             </p>
 
-                            <button class="product-details">See Details</button>
+                            <button class="product-details see-details-btn">See Details</button>
                         </div>
                     </div>
                     <div class="option">
@@ -116,7 +115,7 @@
                                 
                             </p>
 
-                            <button class="product-details">See Details</button>
+                            <button class="product-details see-details-btn">See Details</button>
                         </div>
                     </div>
 
@@ -172,6 +171,18 @@
                     default:
                         break;
                 }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const seeDetailsButtons = document.querySelectorAll('.see-details-btn');
+    
+            seeDetailsButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Redirect to the product-details page
+                    window.location.href = 'product-details.html'; // Replace with your actual link
+                });
             });
         });
     </script>
