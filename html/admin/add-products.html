@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../../style/admin/add-products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="article">
+            <div class="nav-bar" style="height: 60px;">
+                <div class="nav-bar-fixed">
+                    <div class="navbar-content">
+                        <div class="navbar-left">
+                            <i class="fas fa-chevron-left" style="vertical-align: middle;"></i>
+                            <span class="back-text" style="vertical-align: middle; position: relative;">Back</span>
+                        </div>
+                        <div class="title">
+                            <div style="color: black;">Add Product</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-wrap">
+                <div class="article-content">
+                    <div class="info-item">
+                        <div class="item-text" id="product-name">Product Name</div>
+                        <div class="input-nickname">
+                            <input type="text" placeholder="Product Name">
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="item-text" id="invest-value">Invest</div>
+                        <div class="input-nickname">
+                            <input type="number" placeholder="Invest value">
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="item-text" id="cycle-value">Cycle</div>
+                        <div class="input-nickname">
+                            <input type="number" placeholder="Cycle value">
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="item-text" id="total-value">Total</div>
+                        <div class="input-nickname">
+                            <input type="number" placeholder="Total value">
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="item-text" id="product-image">Product Image</div>
+                        <div class="input-image">
+                            <input class="file-input" type="file" id="imageInput" accept="image/*"
+                                style="color: black; text-align: left;">
+                        </div>
+                    </div>
+                    <div class="center-button">
+                        <button id="submitButton">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const backButton = document.querySelector('.back-text');
+        const submitButton = document.getElementById('submitButton');
+
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
+
+        submitButton.addEventListener('click', () => {
+            // Code to handle the submit button click
+            // You can retrieve the values of the input fields and perform any necessary actions here
+            // For example, you can use document.querySelector to get the values and send them to a server or perform validation
+            // Example:
+            // const nicknameValue = document.querySelector('.input-nickname input[type="text"]').value;
+            // const avatarImage = document.querySelector('.item-image img').src;
+            // Then you can use these values for further processing
+        });
+    </script>
+</body>
+
+</html>
