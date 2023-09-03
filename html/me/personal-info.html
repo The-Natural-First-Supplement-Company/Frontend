@@ -49,8 +49,9 @@
                     </div>
                     <div class="info-item">
                         <div class="item-text">Modify Avatar</div>
-                        <div class="item-image">
-                            <div class="add-avatar-icon">&nbsp;+</div>
+                        <div class="input-image">
+                            <input class="file-input" type="file" id="imageInput" accept="image/*"
+                                style="color: black; text-align: left;">
                         </div>
                     </div>
                     <div class="center-button">
@@ -64,7 +65,6 @@
     <script>
         const backButton = document.querySelector('.back-text');
         const submitButton = document.getElementById('submitButton');
-        const modifyAvatarIcon = document.querySelector('.add-avatar-icon');
 
         backButton.addEventListener('click', () => {
             window.history.back();
@@ -78,30 +78,6 @@
             // const nicknameValue = document.querySelector('.input-nickname input[type="text"]').value;
             // const avatarImage = document.querySelector('.item-image img').src;
             // Then you can use these values for further processing
-        });
-
-        modifyAvatarIcon.addEventListener('click', () => {
-            // Code to handle the Modify Avatar icon click
-            // You can use the HTML input element of type file to handle image upload
-            const fileInput = document.createElement('input');
-            fileInput.type = 'file';
-            fileInput.accept = 'image/*';
-            fileInput.addEventListener('change', (event) => {
-                const selectedFile = event.target.files[0];
-                if (selectedFile) {
-                    // Handle the selected file here, you can use FileReader to preview the image
-                    const reader = new FileReader();
-                    reader.onload = (e) => {
-                        const imagePreview = document.createElement('img');
-                        imagePreview.src = e.target.result;
-                        imagePreview.classList.add('uploaded-avatar');
-                        modifyAvatarIcon.innerHTML = ''; // Clear the "+" icon
-                        modifyAvatarIcon.appendChild(imagePreview);
-                    };
-                    reader.readAsDataURL(selectedFile);
-                }
-            });
-            fileInput.click(); // Trigger the file input click event
         });
     </script>
 </body>

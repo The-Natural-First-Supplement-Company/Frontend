@@ -91,22 +91,11 @@ body {
     margin-bottom: 15px;
 }
 
-/* img {
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    border: 0;
-    display: block;
-} */
-
-/* Existing styles... */
-
 .info-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 10px;
-    /* cursor: pointer; */
     border-bottom: 1px solid #ccc;
 }
 
@@ -130,7 +119,6 @@ body {
     border-radius: 10px;
     margin-left: -200px;
     box-sizing: border-box;
-    /* Add this to include padding in width calculation */
 }
 
 .item-icon {
@@ -209,8 +197,6 @@ body {
     top: -2px;
     cursor: pointer;
 }
-
-/* Existing styles... */
 
 /* Responsive CSS */
 @media screen and (max-width: 768px) {
@@ -342,6 +328,49 @@ body {
     width: 100px;
     height: 100px;
     object-fit: cover;
+}
+
+.input-image {
+    display: flex;
+    align-items: center;
+}
+
+.file-input {
+    margin-right: -30px; 
+}
+
+@media screen and (max-width: 768px) {
+    .file-input {
+        margin-right: -16px; 
+    }
+}
+
+@media screen and (max-width: 638px) {
+    .file-input {
+        margin-right: calc(30% - 30px); 
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 484px) {
+    .file-input {
+        margin-right: calc(30% - 40px); 
+        font-size: xx-small;
+    }
+}
+
+@media screen and (max-width: 304px) {
+    .file-input {
+        margin-right: calc(30% - 40px); 
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .file-input {
+        margin-right: calc(30% - 40px); 
+        font-size: 8px;
+    }
 }
 
 .input-nickname {
@@ -556,6 +585,4 @@ body {
         font-size: 10px;
         width: 35px; 
     }
-
-
 }
