@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../../style/admin/withdraw.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="article">
+            <div class="nav-bar" style="height: 60px;">
+                <div class="nav-bar-fixed">
+                    <div class="navbar-content">
+                        <div class="navbar-left">
+                            <i class="fas fa-chevron-left" style="vertical-align: middle;"></i>
+                            <span class="back-text" style="vertical-align: middle; position: relative;">Back</span>
+                        </div>
+                        <div class="title">
+                            <div style="color: black;">Recharge</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-wrap">
+                <div class="article-content">
+                    <div class="task">
+                        <div class="profile-info">
+                            <div class="profile-info-wrapper profile-info-clickable">
+                                <div class="profile-content">
+                                    <div class="profile-image">
+                                        <!-- Replace with an actual image URL -->
+                                        <img src="../../images/logo.png" alt="Profile Image">
+                                    </div>
+                                    <div class="profile-text">
+                                        <p><span id="user-mail">user@example.com</span></p>
+                                        <p><span id="user-id">ID : 123456</span></p>
+                                    </div>
+                                </div>
+                                <div class="settings-icon">
+                                    <div class="amount">Amount: <span id="amount">&#x20b9; 350</span></div>
+                                    <div class="status">Status: <span id="status">Succeed</span></div>
+                                    <div class="date">Date: <span id="date">21 May 2000</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wallet-separator"></div>
+                        <div class="profile-info">
+                            <div class="profile-info-wrapper profile-info-clickable">
+                                <div class="profile-content">
+                                    <div class="profile-image">
+                                        <!-- Replace with an actual image URL -->
+                                        <img src="../../images/logo.png" alt="Profile Image">
+                                    </div>
+                                    <div class="profile-text">
+                                        <p><span id="user-mail">user@example.com</span></p>
+                                        <p><span id="user-id">ID : 123456</span></p>
+                                    </div>
+                                </div>
+                                <div class="settings-icon">
+
+                                <div class="amount">Amount: <span id="amount">&#x20b9; 350</span></div>
+                                <div class="status">Status: <span id="status">Succeed</span></div>
+                                <div class="date">Date: <span id="date">21 May 2000</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet-separator"></div>
+                    <div class="no-more">No more!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="purchase-popup">
+        <div class="popup-content">
+            <div class="wallet">
+                <div class="popup-info-wrapper">
+                    <div class="pop-up-content">
+                        <div class="popup-image">
+                            <!-- Replace with an actual image URL -->
+                            <img src="../../images/logo.png" alt="Profile Image">
+                        </div>
+                        <div class="popup-text">
+                            <p><span class="user-mail">user@example.com</span></p>
+                            <p><span class="user-id">ID : 123456</span></p>
+                        </div>
+                    </div>
+            </div>
+            <div class="div-separator"></div>
+            <div class="price-row">
+                <div class="info-item">
+                    <div class="amount-title">Amount</div>
+                    <div class="amount-value" id="amount">&#x20b9; 350</div>
+                </div>
+                <div class="info-item">
+                    <div class="date-title">Date & time</div>
+                    <div class="date-time" id="date-time">21 May 2000</div>
+                </div>
+                <div class="buttons">
+                    <button class="denied-button">Deny</button>
+                    <button class="succeed-button">Succeed</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const backButton = document.querySelector('.back-text');
+            const submitButton = document.getElementById('submitButton');
+
+            backButton.addEventListener('click', () => {
+                window.history.back();
+            });
+
+            submitButton.addEventListener('click', () => {
+                // Code to handle the submit button click
+                // You can retrieve the values of the input fields and perform any necessary actions here
+                // For example, you can use document.querySelector to get the values and send them to a server or perform validation
+                // Example:
+                // const nicknameValue = document.querySelector('.input-nickname input[type="text"]').value;
+                // const avatarImage = document.querySelector('.item-image img').src;
+                // Then you can use these values for further processing
+            });
+        </script>
+
+        <script>
+            const profileInfoClickable = document.querySelector('.profile-info-clickable');
+            const popup = document.querySelector('.popup');
+
+            profileInfoClickable.addEventListener('click', () => {
+                // Toggle the visibility of the popup when the profile info div is clicked
+                popup.classList.toggle('active');
+            });
+        </script>
+</body>
+
+</html>
