@@ -111,6 +111,17 @@ body {
     outline: none;
 }
 
+.info-item textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0;
+    background: none;
+    color: black;
+    outline: none;
+}
+
 .item-text {
     flex: 1;
     font-size: 18px;
@@ -248,7 +259,7 @@ body {
     align-items: center;
     background: #f7f6f6;
     border-radius: 10px;
-    padding: 0 5px;
+    /* padding: 0 5px; */
     margin-left: 100px;
     box-sizing: border-box;
 }
