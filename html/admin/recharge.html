@@ -62,9 +62,9 @@
                                 </div>
                                 <div class="settings-icon">
 
-                                <div class="amount">Amount: <span id="amount">&#x20b9; 350</span></div>
-                                <div class="status">Status: <span id="status">Succeed</span></div>
-                                <div class="date">Date: <span id="date">21 May 2000</span></div>
+                                    <div class="amount">Amount: <span id="amount">&#x20b9; 350</span></div>
+                                    <div class="status">Status: <span id="status">Succeed</span></div>
+                                    <div class="date">Date: <span id="date">21 May 2000</span></div>
                                 </div>
                             </div>
                         </div>
@@ -77,6 +77,7 @@
     </div>
 
     <div class="popup" id="purchase-popup">
+        <div class="close-button" id="close-button">&times;</div>
         <div class="popup-content">
             <div class="wallet">
                 <div class="popup-info-wrapper">
@@ -90,52 +91,61 @@
                             <p><span class="user-id">ID : 123456</span></p>
                         </div>
                     </div>
-            </div>
-            <div class="div-separator"></div>
-            <div class="price-row">
-                <div class="info-item">
-                    <div class="amount-title">Amount</div>
-                    <div class="amount-value" id="amount">&#x20b9; 350</div>
                 </div>
-                <div class="info-item">
-                    <div class="date-title">Date & time</div>
-                    <div class="date-time" id="date-time">21 May 2000</div>
-                </div>
-                <div class="buttons">
-                    <button class="denied-button">Deny</button>
-                    <button class="succeed-button">Succeed</button>
+                <div class="div-separator"></div>
+                <div class="price-row">
+                    <div class="info-item">
+                        <div class="amount-title">Amount</div>
+                        <div class="amount-value" id="amount">&#x20b9; 350</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="date-title">Date & time</div>
+                        <div class="date-time" id="date-time">21 May 2000</div>
+                    </div>
+                    <div class="buttons">
+                        <button class="denied-button">Deny</button>
+                        <button class="succeed-button">Succeed</button>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script>
-            const backButton = document.querySelector('.back-text');
-            const submitButton = document.getElementById('submitButton');
+    <script>
+        const backButton = document.querySelector('.back-text');
+        const submitButton = document.getElementById('submitButton');
 
-            backButton.addEventListener('click', () => {
-                window.history.back();
-            });
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
 
-            submitButton.addEventListener('click', () => {
-                // Code to handle the submit button click
-                // You can retrieve the values of the input fields and perform any necessary actions here
-                // For example, you can use document.querySelector to get the values and send them to a server or perform validation
-                // Example:
-                // const nicknameValue = document.querySelector('.input-nickname input[type="text"]').value;
-                // const avatarImage = document.querySelector('.item-image img').src;
-                // Then you can use these values for further processing
-            });
-        </script>
+        submitButton.addEventListener('click', () => {
+            // Code to handle the submit button click
+            // You can retrieve the values of the input fields and perform any necessary actions here
+            // For example, you can use document.querySelector to get the values and send them to a server or perform validation
+            // Example:
+            // const nicknameValue = document.querySelector('.input-nickname input[type="text"]').value;
+            // const avatarImage = document.querySelector('.item-image img').src;
+            // Then you can use these values for further processing
+        });
+    </script>
 
-        <script>
-            const profileInfoClickable = document.querySelector('.profile-info-clickable');
-            const popup = document.querySelector('.popup');
+    <script>
+        const profileInfoClickable = document.querySelector('.profile-info-clickable');
+        const popup = document.querySelector('.popup');
 
-            profileInfoClickable.addEventListener('click', () => {
-                // Toggle the visibility of the popup when the profile info div is clicked
-                popup.classList.toggle('active');
-            });
-        </script>
+        profileInfoClickable.addEventListener('click', () => {
+            // Toggle the visibility of the popup when the profile info div is clicked
+            popup.classList.toggle('active');
+        });
+
+        const closeButton = document.getElementById('close-button');
+
+        closeButton.addEventListener('click', () => {
+            // Close the popup when the close button is clicked
+            popup.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>

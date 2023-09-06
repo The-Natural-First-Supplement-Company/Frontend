@@ -98,6 +98,21 @@ body {
     padding-left: 15px;
 }
 
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1;
+    padding-right: 10px;
+}
+
+/* Style when hovering over the close button */
+.close-button:hover {
+    color: red; /* Change the color on hover, you can customize this */
+}
+
 .profile-image img {
     border-radius: 5px;
     width: 80px;
@@ -262,7 +277,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: -25px;
+    margin-top: -8px;
     padding: 10px;
 }
 
@@ -390,6 +405,10 @@ body {
 
     .succeed-button , .denied-button {
         font-size: 14px;
+    }
+
+    .close-button {
+        font-size: 20px;
     }
 }
 
