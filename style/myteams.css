@@ -156,7 +156,7 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 434px){
+@media screen and (max-width: 434px) {
     .balance {
         font-size: 15px;
     }
@@ -204,6 +204,8 @@ body {
     padding: 8px;
     text-align: left;
     color: #333;
+    max-width: 270px;
+    font-size: medium;
 }
 
 .view-product-button {
@@ -212,16 +214,19 @@ body {
     padding: 6px 12px;
     border: none;
     border-radius: 5px;
-    background-color: #ff69b4; /* Reddish pink color */
+    background-color: #ff69b4;
+    /* Reddish pink color */
     color: #fff;
     cursor: pointer;
 }
 
 .no-data-text {
     text-align: center;
-    opacity: 0.6; /* Adjust the opacity value as needed */
+    opacity: 0.6;
+    /* Adjust the opacity value as needed */
     margin-top: 10px;
-    color: black
+    color: black;
+    font-size: medium;
 }
 
 /* Responsive CSS for screen width up to 728px */
@@ -264,6 +269,11 @@ body {
         padding: 3px 6px;
         font-size: 0.6rem;
     }
+
+    .member-table th,
+    .member-table td {
+        font-size: 12px;
+    }
 }
 
 /* Responsive CSS for screen width up to 400px */
@@ -285,6 +295,19 @@ body {
         padding: 2px 4px;
         font-size: 0.5rem;
     }
+
+    .member-table th,
+    .member-table td {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .member-table th,
+    .member-table td {
+        font-size: 8px;
+    }
 }
 
 /* Responsive CSS for screen width up to 280px */
@@ -305,5 +328,14 @@ body {
     .view-product-button {
         padding: 1px 2px;
         font-size: 0.4rem;
+    }
+}
+
+
+@media screen and (max-width: 295px) {
+
+    .member-table th,
+    .member-table td {
+        font-size: 7px;
     }
 }
