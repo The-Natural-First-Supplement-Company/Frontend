@@ -61,7 +61,6 @@ body {
     top: -0.1rem;
     right: 0;
     bottom: 4.2rem;
-    overflow-y: auto;
     left: 0;
 }
 
@@ -291,7 +290,7 @@ body {
 .main-content {
     background-color: #b8e5b8;
     max-height: calc(100vh - 60px);
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 .options a {
