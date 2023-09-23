@@ -18,6 +18,10 @@ body {
     color: #333;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+  }
+
 .app {
     height: 100%;
     font-size: 1rem;
@@ -87,6 +91,25 @@ body {
 .article-content {
     padding: 1rem 0;
     font-size: 1.2rem;
+    overflow-y: auto;
+}
+
+.article-content::-webkit-scrollbar{
+    display: none;
+  }
+
+.images-temp {
+    margin-top: 5px;
+    margin-bottom: 100px;
+    padding: 1rem 0;
+}
+
+.images-temp img {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    border: 0;
+    display: block;
 }
 
 img {
@@ -146,10 +169,6 @@ img {
 
     .navbar-content {
         font-size: small;
-    }
-
-    .fas .fa-chevron-right {
-        
     }
 }
 
